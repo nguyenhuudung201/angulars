@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let p of products" class="col-3">
+      <div class="card ">
+        <img [src]="p.thumbnail" class="img-fluid">
+        <div class="card-body">
+          <h2>ID:{{p.id}}</h2>
+          <h2><a routerLink="/product/{{p.id}}">{{p.title}}</a></h2>
+          <p class="text-danger">{{p.price }}</p>
+          <button class="btn btn-outline-danger"> Add to cars</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class=" row">
+  <div class="col text-center mb-5 mt-3">
+    <button (click)="LoadMore()" type="button" class="btn btn-outline-danger">Load More</button>
+  </div>
+</div>
+
